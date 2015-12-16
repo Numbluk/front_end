@@ -1,0 +1,28 @@
+/*
+	===================
+	Body
+	===================
+*/
+body {
+	color: #eeeeee;
+	background-color: #2C86FF;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+	===================
+	Links
+	===================
+*/
+a {
+	color: #c3b802;
+}
+
+/*
+	===================
+	Lists
+	===================
+*/
+body li {
+	padding-bottom: 10px;
+}
