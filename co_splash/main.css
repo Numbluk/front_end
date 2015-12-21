@@ -1,0 +1,81 @@
+/*
+	===================
+	Body
+	===================
+*/
+body {
+	background-image: url("assets/bg_body.gif");
+	color: #45494d;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+	max-width: 1000px;
+	max-height: 800px;   
+	background-color: white;   
+	margin: auto; 	   
+	padding-bottom: 144px;
+	margin-top: 80px; 
+}
+
+/*
+	===================
+	Headers
+	===================
+*/
+h1, h2, h3 {
+	text-align: center;
+}
+
+h1 {
+	margin-top: 160px;
+}
+
+h2 {
+	font-size: 36px;
+	padding-top: 124px;
+}
+
+h3 {
+	color: #3e98b2;
+	font-szie: 20px;
+}	
+
+/*
+	===================
+	Paragraphs
+	===================
+*/
+p {
+	text-align: center;
+	margin: 0 115px;
+	font-size: 20px;
+}
+
+/*
+	===================
+	Footer
+	===================
+*/
+footer {
+	max-width: 1000px; 	
+	margin: auto;
+	margin-bottom: 144px;
+	background-color: #e7e7e7;
+}
+
+footer img {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 30px 0 30px 0;
+}
+
+li {
+	display: inline;
+	padding: 0 62px 0 62px;
+}
