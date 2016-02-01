@@ -1,0 +1,172 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set min-height for linear-gradient to stretch */
+html {
+  min-height: 100%;
+}
+
+/* Body */
+body {
+  background-color: #d1dbbd;
+  background-image: linear-gradient(to bottom, #d1dbbd, #fff);
+  max-width: 1200px;
+  font-size: 16px;
+  margin: 0 auto;
+  vertical-align: bottom;
+  padding: 20px 8.3333333% 40px 8.3333333%;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+  background: url("assets/logo.png") no-repeat;
+  background-position: left 2.083333333% top 2%;
+  background-size: 11% auto;
+  box-sizing: border-box;
+  font-size: 0.875em;
+  /*padding-top: 20px;*/
+}
+
+header h1{
+  color: #193441;
+  float: left;
+  font-size: 2em;
+  padding-left: 13.541666666%;
+  padding-top: 4.5%;
+}
+
+header ul {
+  color: #fff;
+  float: right;
+  margin-right: 20px;
+  padding-top: 75px;
+  padding-left: 11.919166666%;
+  box-sizing: border-box;
+}
+
+header li {
+  float: left;
+  background-color: #fcfff5;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+header a {
+  display: block;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  font-style: 0.75em;
+}
+
+header li+li {
+  margin-left: 10px;
+}
+
+header li:last-of-type {
+  margin-left: 10px;
+}
+
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Main */
+main {
+  clear: both;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  color: #3e606f;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+main h2 {
+  font-size: 1.625em; /* 26 / 16 */
+  padding-bottom: 32px;
+}
+
+main p {
+  font-size: 0.615384615em; /* 16 / 26 */
+  padding-bottom: 26px;
+}
+
+main p:last-of-type {
+  padding-bottom: 170px;
+}
+
+main > img {
+  width: 100%;
+  height: auto;
+}
+
+main #beach_tree {
+  float: right;
+  height: 500px;
+  width: auto;
+}
+
+
+/* Footer */
+footer {
+  color: #3e606f;
+  margin: 0 auto;
+  width: 80%;
+}
+
+footer small {
+  font-size: 0.75em;
+}
