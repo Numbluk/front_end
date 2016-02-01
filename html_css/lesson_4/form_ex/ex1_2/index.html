@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form action="#" method="post">
+      <section>
+        <h1> Contact Information </h1>
+
+        <p>
+          <label for="first_name">
+            <span>First Name:</span>
+            <input type="text" id="first_name" name="first_name" autofocus="true">
+          </label>
+        </p>
+        <p>
+          <label for="last_name">
+            <span>Last Name:</span>
+            <input type="text" id="last_name" name="last_name">
+          </label>
+        </p>
+        <p>
+          <label for="email">
+            <span>Email Address:</span>
+            <input type="email" id="email" name="email" autocorrect="off" autocapitalize="none" autocomplete="off">
+          </label>
+        </p>
+        <p>
+          <label for="tel_number">
+            <span>Telephone Number:</span>
+            <input type="tel" id="tel_number" name="tel_number">
+          </label>
+          <fieldset>
+            <label for="tel_type">Phone Type:</label>
+            <select id="tel_type" name="tel_type">
+              <option selected="true">Home</option>
+              <option>Business</option>
+              <option>Mobile</option>
+            </select>
+          </fieldset>
+        </p>
+      <section>
+    </form>
+  </body>
+</html>

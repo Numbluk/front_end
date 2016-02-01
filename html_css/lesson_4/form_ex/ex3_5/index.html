@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Filter the News!</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <fieldset>
+        <legend>Categories:</legend>
+        <ul>
+          <li>
+            <label for="core">
+              <input type="radio" id="core" name="category" value="core">
+              Core
+            </label>
+          </li>
+          <li>
+            <label for="plugins">
+              <input type="radio" id="plugins" name="category" value="plugins and libraries">
+              Plugins and Libraries
+            </label>
+          </li>
+          <li>
+            <label for="conventions">
+              <input type="radio" id="conventions" name="category" value="conventions">
+              Conventions
+            </label>
+          </li>
+          <li>
+            <label for="reviews">
+              <input type="radio" id="reviews" name="category" value="reviews">
+              Reviews
+            </label>
+          </li>
+          <li>
+            <label for="opinion">
+              <input type="radio" id="opinion" name="category" value="opinion">
+              Opinions
+            </label>
+          </li>
+          <li>
+            <label for="people">
+              <input type="radio" id="people" name="category" value="people">
+              People
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+      <legend>Tags:</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="tag" value="1">
+            HTML
+          </label>
+        </p>
+          <label>
+            <input type="checkbox" name="tag" value="2">
+            CSS
+          </label>
+        <p>
+          <label>
+            <input type="checkbox" name="tag" value="3">
+            Javascript
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="tag" value="4">
+            Ruby
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="tag" value="5">
+            Rails
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="tag" value="6">
+            Python
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" id="django" name="django" value="django">
+            Django
+          </label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Categories</legend>
+          <select name="category" multiple>
+            <option>Core</option>
+            <option>Plugins and Libraries</option>
+            <option>Conventions</option>
+            <option>Reviews</option>
+            <option>Opinion</option>
+            <option>People</option>
+          </select>
+      </fieldset>
+      <fieldset>
+        <legend>Tags:</legend>
+        <select name="tag" multiple>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>Javascript</option>
+          <option>Ruby</option>
+          <option>Rails</option>
+          <option>Python</option>
+          <option>Django</option>
+        </select>
+      </fieldset>
+
+      <label>
+        <input type="reset">
+      </label>
+    </form>
+  </body>
+</html>
