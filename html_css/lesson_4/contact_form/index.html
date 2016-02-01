@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Form!</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+  </head>
+  <body>
+    <main>
+      <form action="" method="post" id="contact">
+        <legend>Contact:</legend>
+
+        <p>
+          <label>
+            <span>First Name</span>
+            <input type="text" name="first_name" autofocus>
+          </label>
+          <label>
+            <span>Last Name</span>
+            <input type="text" name="last_name">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span>Email</span>
+            <input type="email" name="first_name" placeholder="joe@joe.com" autocomplete="off" autocapitalize="none" autocorrect="off">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span>City</span>
+            <input type="text" name="city">
+          </label>
+          <label>
+            <span>State</span>
+            <select name="state">
+              <option>AK</option>
+              <option>AL</option>
+              <option>AR</option>
+              <option>AZ</option>
+              <option>CA</option>
+              <option>CO</option>
+              <option>CT</option>
+              <option>DC</option>
+              <option>DE</option>
+              <option>FL</option>
+              <option>GA</option>
+              <option>HI</option>
+              <option>IA</option>
+              <option>ID</option>
+              <option>IL</option>
+              <option>IN</option>
+              <option>KS</option>
+              <option>KY</option>
+              <option>LA</option>
+              <option>MA</option>
+              <option>MD</option>
+              <option>ME</option>
+              <option>MI</option>
+              <option>MN</option>
+              <option>MO</option>
+              <option>MS</option>
+              <option>MT</option>
+              <option>NC</option>
+              <option>ND</option>
+              <option>NE</option>
+              <option>NH</option>
+              <option>NJ</option>
+              <option>NM</option>
+              <option>NV</option>
+              <option>NY</option>
+              <option>OH</option>
+              <option>OK</option>
+              <option>OR</option>
+              <option>PA</option>
+              <option>RI</option>
+              <option>SC</option>
+              <option>SD</option>
+              <option>TN</option>
+              <option>TX</option>
+              <option>UT</option>
+              <option>VA</option>
+              <option>VT</option>
+              <option>WA</option>
+              <option>WI</option>
+              <option>WV</option>
+              <option>WY</option>
+            </select>
+          </label>
+          <label>
+            <span>Zip</span>
+            <input type="number" name="zip" max="99999" min="11111">
+          </label>
+        </p>
+        <p>
+          <fieldset>
+            <legend>Color Preference:</legend>
+            <ul>
+            <li><label>
+                <input type="radio" name="color" value="1" checked>
+                Blue
+              </label></li>
+              <li><label>
+                <input type="radio" name="color" value="2">
+                Violet
+              </label></li>
+              <li><label>
+                <input type="radio" name="color" value="3">
+                Green
+              </label></li>
+              <li><label>
+                <input type="radio" name="color" value="4">
+                Hoary
+              </label></li>
+            </ul>
+          </fieldset>
+        </p>
+
+        <p>
+          <fieldset>
+            <legend>Web Technologies</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="web_ruby" value="ruby">
+                  Ruby
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="web_rails" value="rails">
+                  Rails
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="web_javascript" value="javascript">
+                  Javascript
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="web_html" value="html">
+                  HTML
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="web_css" value="css">
+                  CSS
+                </label>
+              </li>
+          </fieldset>
+        </p>
+        
+        <p>
+          <textarea placeholder="Comments"></textarea>
+        </p>
+
+        <p>
+          <input type="hidden" name="date" value="2015-02-01">
+        </p>
+
+        <p>
+          <input type="button" form="contact" value="Submit!">
+          <input type="reset">
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
