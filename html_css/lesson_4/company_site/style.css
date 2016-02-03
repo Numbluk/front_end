@@ -1,0 +1,352 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body */
+body {
+  width: 100%;
+  color: #45494d;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: #2f2840 url("assets/images/bg_body.gif") repeat;
+  text-align: center;
+  padding-top: 135px;
+}
+
+header .active {
+  color: #9FB7FF;
+  font-weight: bold;
+}
+
+header h1 {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  background: 0 0 url("assets/images/logo.png") no-repeat;
+  height: 300px;
+  width: 300px;
+  text-indent: -9999px;
+}
+
+header nav {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 125px 0 50px 0;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header li:not(:last-child) {
+  padding-right: 5.5%;
+}
+
+header a {
+  text-decoration: none;
+  color: #cacaca;
+}
+
+
+/* Main */
+main {
+  padding: 60px 0;
+}
+
+main article {
+  width: 64.1666666%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0;
+}
+
+main h1 {
+  color: #9FB7FF;
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+
+main h1::before,
+main h1::after {
+  vertical-align: middle;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  content: '';
+  border-radius: 100%;
+  background-color: #2f2840;
+  font-size: 10px;
+}
+
+main h1::before {
+  margin-right: 5px;
+}
+
+main h1::after {
+  margin-left: 5px;
+}
+
+main h2 {
+  color: #2f2840;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+
+/* Footer */
+footer {
+  background-color: #e7e7e7;
+  text-align: center;
+  padding: 80px 0;
+}
+
+footer p {
+  margin: 0 auto;
+  width: 41.6666666%;
+}
+
+footer nav {
+  padding-top: 48px;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li:not(:last-child) {
+  padding-right: 10.6666666%;
+}
+
+footer ul li a {
+  display: inline-block;
+  text-decoration: none;
+  background: transparent 0 0 url("assets/images/icons_social-media.png") no-repeat;
+  height: 45px;
+  width: 45px;
+  background-size: 45px;
+  text-indent: -99999px;
+}
+
+footer a.facebook {
+  background-position: 0 -45px;
+}
+
+footer a.email {
+  background-position: 0 -90px;
+}
+
+footer a.instagram {
+  background-position: 0 -135px;
+}
+
+/* Projects.html */
+main article{
+  width: 100%;
+}
+
+main img {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: auto;
+  padding: 50px 0;
+}
+
+main p {
+  width: 58.333333333%;
+  margin: 0 auto;
+}
+
+
+/* Team.html */
+main ul {
+  padding-top: 30px;
+  width: 100%;
+}
+
+main li {
+  display: inline-block;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+main li:not(:last-of-type) {
+  /*padding-right: 2%;*/
+}
+
+main li img {
+  display: block;
+  margin-bottom: 22px;
+  padding-bottom: 0;
+}
+
+main li a {
+  text-decoration: none;
+  color: #2f2840;
+}
+
+/* Media Queries */
+/* Tablet */
+@media all and (max-width: 768px) {
+  header {
+    padding-top: 60px;
+  }
+
+  header nav {
+    padding: 50px 0 25px 0;
+  }
+
+  header nav li:not(:last-child) {
+    padding-right: 10%;
+  }
+
+  header img {
+    height: auto;
+    width: 35%;
+  }
+
+  main {
+    padding: 20px 0;
+  }
+
+  main article {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  main li {
+    width: 48%;
+  }
+
+  main h1 {
+    color: #9FB7FF;
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  main p {
+    text-align: justify;
+    width: 100%;
+  }
+}
+
+/* Phone */
+@media all and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    padding: 20px 10px;
+    vertical-align: middle;
+  }
+
+  header h1 {
+    background: url("assets/images/logo.png") no-repeat;
+    background-position: -20px 5px;
+    background-size: 120px 100px;
+    height: 70px;
+    width: 120px;
+    float: left;
+    text-indent: 0px;
+    font-size: 1.5em;
+  }
+
+  header h1 a {
+    display: inline-block;
+    padding-top: 13%;
+    padding-left: 80px;
+    color: white;
+    font-weight: bold;
+  }
+
+  header img {
+    display: none;
+  }
+
+  header ul li:not(:last-child) {
+    padding-right: 0px;
+  }
+
+  header nav {
+    padding: 0;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    padding-right: 20px;
+  }
+
+  header nav ul {
+    text-align: right;
+    float: right;
+  }
+
+  header nav ul li {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  header nav ul a {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
