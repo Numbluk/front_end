@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body */
+body {
+  background-color: #ffd505;
+  color: #fff;
+  min-width: 800px;
+}
+
+/* Header */
+header {
+  margin: 0 auto;
+  background-color: #047ec1;
+  width: 90%;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2em;
+  padding: 4% 0 4% 2.7%;
+}
+
+/* Main */
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ececec;
+  padding: 3% 2.5% 4% 2.5%;
+  box-sizing: border-box;
+  color: #000;
+}
+
+main h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+main ul {
+  padding-top: 30px;
+  display: block;
+  width: 100%;
+}
+
+main li {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 23%;
+  height: 235px;
+  background-color: white;
+  vertical-align: top;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+
+/* Targets everything except first in row */
+main li:not(:nth-of-type(4n+1)) {
+  margin-left: 2.6666666666%;
+}
+
+main li figure {
+  height: 140px;
+  width: auto;
+}
+
+main li img {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  padding-top: 10px;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + figure img {
+  position: absolute;
+  width: 33.33333333%;
+  height: auto;
+  top: 25%;
+  left: 33.33333333%;
+  z-index: 2;
+}
+
+input[type="checkbox"]:checked + figure::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  content: "";
+  z-index: 1;
+}
