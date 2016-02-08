@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">Blog Title</a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="">HOME</a>
+          </li>
+          <li>
+            <a href="html.html">HTML</a>
+          </li>
+          <li>
+            <a href="css.html">CSS</a>
+          </li>
+          <li>
+            <a href="javascript.html">JAVSCRIPT</a>
+          </li>
+          <li>
+            <a href="about.html">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <article>
+          <h1>Post Headline</h1>
+          <h2>Written by <a href="about.html">Lukas Nimmo</a> on <time datetime="2016-02-07">Feb 07, 2016</time></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+        <section class="comments">
+          <h1>Comments</h1>
+          <div class="comment">
+            <h2 id="kevin"><a href="#">Kevin</a> on Feb 08, 2016</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="comment">
+            <h2 id="chris"><a href="#">Chris</a> on Feb 08, 2016</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </section>
+
+        <section class="comment-form">
+          <h1>Post Comments</h1>
+          <form action="#" method="post">
+            <p>
+              <label>
+              <input type="text" name="name" placeholder="Enter your Name">
+              </label>
+            </p>
+            <p>
+              <label>
+              <input type="email" name="email" placeholder="Enter your Email Address">
+              </label>
+            </p>
+            <p>
+              <textarea name="comment" placeholder="Enter your Comments"></textarea>
+            </p>
+          </form>
+
+          <button class="button" value="Submit">Submit</button>
+        </section>
+      </section><!--
+
+
+
+      --><aside>
+        <h2>Categories</h2>
+
+        <nav>
+          <li>
+            <a href="">HOME</a>
+          </li>
+          <li>
+            <a href="html.html">HTML</a>
+          </li>
+          <li>
+            <a href="css.html">CSS</a>
+          </li>
+          <li>
+            <a href="javascript.html">Javascript</a>
+          </li>
+          <li>
+            <a href="about.html">Other</a>
+          </li>
+        </nav>
+
+        <div class="about">
+          <h2>ABOUT</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy;2016 Blog Title</p>
+    </footer>
+  </body>
+</html>

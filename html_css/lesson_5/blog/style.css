@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body */
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.active {
+  color: #50c3af;
+}
+
+/* Header */
+header {
+  background-color: #3D3D3D;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+header h1 a {
+  display: inline-block;
+  padding: 140px 0 140px 0;
+  letter-spacing: 0.3em;
+  background: url("assets/images/logo.png") no-repeat;
+  background-position: 0 100%;
+  background-size: 100% auto;
+}
+
+header nav {
+  padding-top: 50px;
+  font-size: 1em;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav li:not(:first-of-type) {
+  padding-left: 5%;
+}
+
+header a {
+  color: #ffffff;
+}
+
+/* Main */
+main {
+  line-height: 1.5;
+}
+
+main section,
+main aside {
+  display: inline-block;
+  vertical-align: top;
+}
+
+main section {
+  color: #45494d;
+  width: 72.083333333333333%; /* 865 / 1200 */
+}
+
+main aside {
+  width: 19.5833333333%; /* 235 / 1200 */
+}
+
+main article,
+main .pagination,
+main .comments,
+main .comment-form {
+  width: 75.1445086705%; /* 650 / 865 */
+  margin: 0 auto;
+}
+
+main article,
+main .pagination {
+  padding-top: 90px;
+}
+
+main h1 {
+  font-size: 1.625em;
+  color: #0ebfdd;
+  font-weight: bold;
+}
+
+main article h1 a {
+  color: #0ebfdd;
+}
+
+main article a {
+  color: #50c3af;
+}
+
+section h2,
+section p {
+  padding-top: 30px;
+}
+
+/* Section Pagination */
+.button {
+  display: inline-block;
+  color: white;
+  background-color: #50c3af;
+  border-radius: 20px;
+  padding: 10px 27px;
+}
+
+.pagination a:last-child{
+  margin-left: 3.46820809249%;
+}
+
+.pagination a.not-active {
+  pointer-events: none;
+  cursor: default;
+  background-color: #d2d5da;
+}
+
+
+/* Aside */
+main aside {
+  /*min-width: 200px;*/
+  margin: 90px 0 0 0;
+  background-color: #d2d5da;
+  box-sizing: border-box;
+  padding: 38px 2.91666666667%; /* 35 / 1200 */
+  color: #384048;
+  font-size: 0.9em;
+  list-style: none;
+}
+
+aside h2 {
+  padding-bottom: 35px;
+  font-size: 1.2em;
+}
+
+aside .about {
+  padding-top: 120px;
+}
+
+aside a,
+aside p {
+  color: #787b80;
+}
+
+aside li {
+  display: block;
+  padding-left: 23px;
+  background: 0 3px url('assets/images/bullet_arrow.png') no-repeat;
+}
+
+aside li:not(:last-of-type) {
+  padding-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  color: #d2d5da;
+  padding: 20px 0 55px 0;
+  margin: 90px auto 0 auto;
+  width: 83.3333333333%;/* ((865 + 335) - 200(<-R/L margin)) / 1200 */
+  border-top: 1px solid #d2d5da;
+}
+
+
+/* Comments */
+main section.comments {
+  display: block;
+  padding-top: 90px;
+}
+
+.comments h2 {
+  display: inline-block;
+  padding: 10px 0 10px 55px;
+}
+
+.comments a {
+  color: #50c3af;
+}
+
+.comments h2#chris {
+  background: url('assets/images/chris.jpg') no-repeat;
+  /*background-position: 0 20px;*/
+}
+
+.comments h2#kevin {
+  background: url('assets/images/kevin.jpg') no-repeat;
+  /*background-position: 0 20px;*/
+}
+
+.comments p {
+  padding-top: 15px;
+}
+
+.comment {
+  margin: 20px 0;
+}
+
+/* Comment Form */
+.comment-form {
+  display: block;
+  padding-top: 90px;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid rgba(206, 206, 206, 0.5);
+  padding-left: 5px;
+}
+
+input {
+  height: 20px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  margin-top: 10px;
+  border: none;
+}
+
+/* Small Tablets */
+@media screen and (max-width: 768px) {
+  header h1 a {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  header nav {
+    padding-bottom: 25px;
+  }
+
+  main h1 {
+    font-size: 1.25em;
+  }
+
+  aside h2 {
+    font-size: 1em;
+  }
+}
+/* Large Tablets */
+@media screen and (max-width: 600px) {
+  main article {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main aside {
+    width: 27.9166666667%;
+    padding-top: 10px;
+  }
+
+  footer {
+    width: 90%;
+  }
+}
+/* 480 Phones */
+@media screen and (max-width: 480px) {
+  main > section {
+    width: 100%;
+  }
+
+  main article {
+    width: 100%;
+    padding: 20px 1%;
+  }
+
+  main aside {
+    display: block;
+    width: 100%;
+  }
+
+  main aside div.categories,
+  main aside div.about {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding-top: 10px;
+  }
+
+  aside div.about {
+    padding-top: 0;
+  }
+
+}
+/* 320 Phones */
+@media screen and (max-width: 320px) {
+  header h1 a {
+    background-position: 35% 100%;
+    background-size: 80% auto;
+  }
+
+  main article {
+    width: 100%;
+    padding: 20px 1%;
+  }
+}
