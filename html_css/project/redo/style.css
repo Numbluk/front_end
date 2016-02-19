@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************************************************************
+Body-level && Shared Attributes
+***************************************************************************/
+html {
+  height: 100%;
+}
+
+body {
+  width: 1200px;
+  height: 100%;
+}
+
+main,
+aside {
+  display: inline-block;
+  vertical-align: top;
+}
+
+main {
+  width: 865px;
+  background-color: #cecece;
+}
+
+aside {
+  width: 335px;
+}
+
+aside #sidebar_background {
+  position: absolute; /* Relative to body */
+  background-color: #464f77;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 335px; /* Same as sidebar */
+  height: 100%;
+}
+
+/***************************************************************************
+Aside
+***************************************************************************/
+aside {
+  color: #c7c7c7;
+  font-size: 14px;
+  height: auto;
+}
+
+aside h2,
+aside ul,
+aside li,
+aside a {
+  box-sizing: border-box;
+}
+
+
+aside h2 {
+  font-size: 18px;
+}
+
+aside .active,
+aside h2 {
+  color: #ffffff;
+}
+
+aside h2 {
+  margin: 70px 32px 11px 102px;
+  padding: 8px 0 5px 35px;
+  background: transparent url('assets/images/icon_list.png') no-repeat;
+}
+
+aside h2.completed_todos {
+  margin-top: 65px;
+  background: transparent url('assets/images/icon_checked.png') no-repeat;
+}
+
+aside h2 span {
+  color: #a2a6ba;
+}
+
+aside li a {
+  color: #a2a6ba;
+  padding: 0 32px 0 137px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+
+aside span {
+  float: right;
+  background-color: #6b7292;
+  border-radius: 100%;
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  margin-top: 11px; /* (a height(40px) - circle height(18px)) / 2 */
+}
+
+aside h2 span {
+  width: 24px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+aside a.active {
+  display: block;
+  background-color: #383f5f;
+}
+
+/***************************************************************************
+Main Content
+***************************************************************************/
+div#cross {
+  position: relative;
+  display:inline-block;
+  width: 1px;
+  height: 13px; /* Fix this. Not odd. So not centered */
+  margin-left: 6px;
+  margin-right: 20px;
+  background-color: #148fd5;
+}
+
+div#cross::after {
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 13px; /* Fix this. Not odd. So not centered */
+  top: 6px;
+  left: -6px;
+  background-color: #148fd5;
+  content: "";
+}
