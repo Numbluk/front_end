@@ -7,8 +7,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,.
-
+small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -47,417 +46,408 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/**********************************************
 
-Begin
+/***************************************************************************
+Body-level && Shared Attributes
+***************************************************************************/
+html {
+  height: 100%;
+}
 
-**********************************************/
 body {
-  overflow: hidden;
-  vertical-align: top;
-  line-height: 1.5;
-}
-
-aside {
-  float: left;
-}
-
-main {
-  float: left;
+  width: 1200px;
+  height: 100%;
+  font-family: sans-serif;
 }
 
 a {
-  display: inline-block;
   text-decoration: none;
 }
 
+main,
+aside {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
 main {
-  width: 69.583%; /* 865 / 1200 */
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+  width: 865px; /* 865 / 1200 */
+  background-color: #ffffff;
 }
 
-main section {
-  padding: 20px 0 0 2.312%;
-  padding-right: 11.561%; /* 100 / 865 */
-  width: 86.127%; /* 745 / 865 */
+aside {
+  width: 335px; /* 335 / 1200 */
 }
 
-main a + a {
+.sidebar_background {
+  position: absolute; /* Relative to body */
+  background-color: #464f77;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 335px; /* Same as sidebar */
+  height: 100%;
+}
+
+/* Classes that toggle aside and sidebar_background display */
+.fixed {
+  position: fixed;
+  z-index: 1;
+}
+
+.fixed_background {
+  position: fixed;
+  background-color: #464f77;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 335px; /* Same as sidebar */
+  height: 100%;
+}
+
+/***************************************************************************
+Aside
+***************************************************************************/
+aside {
+  color: #c7c7c7;
+  font-size: 14px;
+  height: auto;
+}
+
+aside h2,
+aside ul,
+aside li,
+aside a {
+  box-sizing: border-box;
+}
+
+
+aside h2 {
+  font-size: 18px;
+}
+
+aside .active,
+aside h2 {
+  color: #ffffff;
+}
+
+aside h2 {
+  margin: 70px 32px 11px 102px;
+  padding: 8px 0 5px 35px;
+  background: transparent url('assets/images/icon_list.png') no-repeat;
+}
+
+aside h2.completed_todos {
+  margin-top: 65px;
+  background: transparent url('assets/images/icon_checked.png') no-repeat;
+}
+
+aside h2 span {
+  color: #a2a6ba;
+}
+
+aside li a {
+  color: #a2a6ba;
+  padding: 0 32px 0 137px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+
+aside span {
   float: right;
-  vertical-align: middle;
-  height: 19px;
-  width: 19px;
-  background: transparent url("assets/images/icon_trashcan.png") 0 0;
+  background-color: #6b7292;
+  border-radius: 100%;
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  margin-top: 11px; /* (a height(40px) - circle height(18px)) / 2 */
+}
+
+aside h2 span {
+  width: 24px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+aside a.active {
+  display: block;
+  background-color: #383f5f;
+}
+
+/***************************************************************************
+Main Content
+***************************************************************************/
+main {
+  padding: 23px 0 0 20px;
+  padding-right: 11.561%; /* 100 / 865 */
+  font-size: 14px;
+  position: relative;
+  height: 100%;
+}
+
+main > a,
+main h1,
+main ul li {
+  padding-left: 12px;
+}
+
+main a#hamburger {
+  visibility: hidden;
+}
+
+.position_hamburger_abs {
+  position: absolute;
+  left: 347px; /* 335 + 12 */
+  top: 23px;
 }
 
 main h1 {
-  padding-top: 36px;
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 23px;
+  padding-bottom: 45px;
 }
 
-main h1 + a#new_item {
-  padding-top: 45px;
-  font-size: 16px;
-  color: #148fd5;
-}
-
-main div#cross {
+main h1 span {
   display: inline-block;
-  height: 13px;
-  width: 1px;
-  position: relative;
-  background: #148fd5;
-  margin-left: 6px;
-  margin-right: 20px
-}
-
-main div#cross::after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 13px;
-  top: 6px;
-  left: -6px;
-  background: #148fd5;
-}
-
-/************************
-
-Modal
-
-************************/
-main {
-  position: relative;
-}
-
-/***********************/
-h3 {
-  display: inline-block;
-}
-
-form ul,
-form li {
-  display: inline-block;
-}
-
-li label.hide_label {
-  display: none;
-}
-
-div.description label {
-  float: left;
-}
-
-div.description textarea {
-  float: left;
-}
-
-div.description::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-/*************
-
-Body of Modal
-
-*************/
-form {
-  box-sizing: border-box;
-  padding: 35px 0 38px 0;
-  padding-left: 30px; /* 30 / 575 */
-  padding-right: 38px; /* 38 / 575 */
-  width: 575px;
-  background: #ffffff;
-}
-
-/* Set Border Box */
-form div,
-div input,
-div textarea,
-li input {
-  box-sizing: border-box;
-}
-
-/* Set label/headings widths */
-div label {
-  display: inline-block;
-  padding-top: 10px;
-}
-
-form label,
-form h3 {
-  width: 15.30434783%; /* 88 / 507 */
-  padding-right: 3.94473175%; /* 20 / 507 */
-}
-
-/* Set input widths */
-form ul,
-input#title,
-div textarea {
-  width: 398px; /* 398 / 575 */
-}
-
-
-form li input {
-  width: 100%;
-}
-
-form div.date_container li {
-  width: 118px; /* 118 / 398 */
-}
-form ul li.date_span {
-  width: 22px; /* 22 / 398 */
+  margin-left: 20px;
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #148fd5;
+  border-radius: 100%;
   text-align: center;
 }
 
-/* Beautify */
+main a#new_todo {
+  color: #148fd5;
+}
+
+main ul li {
+  margin-top: 16px;
+  border-top: solid 1px #e7e7e7;
+  padding-top: 18px;
+  width: 100%;
+}
+
+main li a.trashcan {
+  float: right;
+}
+
+/* Checkbox positioning */
+main ul li {
+  position: relative;
+}
+
+main li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* List item complete/incomplete */
+main li label span {
+  color: #000000;
+  background: transparent url("assets/images/icon_checkbox_unchecked.png") no-repeat;
+  padding-left: 27px;
+}
+
+main li span:hover {
+  color: #148fd5;
+  cursor:  pointer;
+}
+
+main li input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+  color: #b3b3b3;
+  background: transparent url("assets/images/icon_checkbox_checked.png") no-repeat;
+}
+
+div#cross {
+  position: relative;
+  display:inline-block;
+  width: 1px;
+  height: 13px; /* Fix this. Not odd. So not centered */
+  margin-left: 6px;
+  margin-right: 20px;
+  background-color: #148fd5;
+}
+
+div#cross::after {
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 13px; /* Fix this. Not odd. So not centered */
+  top: 6px;
+  left: -6px;
+  background-color: #148fd5;
+  content: "";
+}
+
+/***************************************************************************
+Modal
+***************************************************************************/
+
+div#modal_background {
+  position: absolute;
+  top: 0;
+  right: -99999px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+div#modal {
+  position: absolute;
+  top: 107px;
+  left: 105px; /* media: 105 / 865 */
+  height: 400px;
+  width: 575px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+#modal form{
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+}
+
+form div,
+form label,
 form input,
+form h3,
+form fieldset,
 form textarea {
-  border: none;
-  height: 39px;
-  padding-left: 10px;
+  box-sizing: border-box;
 }
 
-/* Note that the ::placeholder's cannot be combined */
-::-webkit-input-placeholder { color: rgba(0, 0, 0, 0.4) }
-:-moz-placeholder { color: rgba(0, 0, 0, 0.4) }
-:-ms-input-placeholder { color: rgba(0, 0, 0, 0.4) }
-
-form textarea {
-  resize: none;
-  padding-top: 10px;
-  height: 146px;
+form input,
+textarea {
+  border: 0;
 }
 
-div.title,
-div.date_container,
-div.description {
-  margin-bottom: 21px;
+form div {
+  padding-right: 38px;
+  padding-left: 30px;
+}
+
+form div.container_title,
+form div.container_dates {
+  margin-top: 48px;
+}
+
+form div.container_description {
+  margin-top: 43px;
+}
+
+form div + div {
+  margin-top: 21px;
+}
+
+/* Align Input Columns */
+form input[type="text"],
+form div.container_dates fieldset,
+form textarea {
+  width: 398px;
+}
+
+/* Align heading/label Columns */
+form label[for="title"],
+form h3,
+form label[for="description"] {
+  display: inline-block;
+  padding-right: 21px;
+  width: 88px;
+}
+
+/* Adjust Due Dates */
+form div.container_dates fieldset {
+  display: inline-block;
+}
+
+fieldset span {
+  display: inline-block;
+  padding: 0 8px;
+}
+
+fieldset input#day,
+fieldset input#month {
+  width: 118px;
+}
+
+fieldset input#year {
+  width: 119px;
 }
 
 form input[type="number"]::-webkit-inner-spin-button {
   opacity: 1;
 }
 
-/* Buttons */
-input[type="button"] {
-  color: #ffffff;
+/* Adjust container_description contents */
+form div.container_description {
+  vertical-align: top;
+}
+
+form label[for="description"],
+form textarea {
+  float: left;
+  padding-top: 5px;
+}
+
+form textarea {
+  height: 137px;
+  padding: 5px;
+  resize: none;
+}
+
+form div.container_description::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* Submit Buttons */
+form div.container_buttons {
+  clear: both;
+  margin-top: 23px;
+  padding-left: 119px;
+  width: 100%; /* 398 + 88 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form div.container_buttons::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+form div.container_buttons input[type="button"] {
+  float: left;
+  font-size: 16px;
+  color: white;
   background-color: #148fd5;
-  border-radius: 6px;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 12px;
+  border: 0;
   width: 184px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   text-align: center;
+  border-radius: 7px;
 }
 
-input#save {
-  margin-left: 110px; /* 140 - 30 */
+form div.container_buttons input#save {
+  margin-right: 18px;
 }
 
-input#finished {
-  margin-left: 18px;
-}
-
-.modal {
-  display: none;
-  font-size: 16px;
-  position: absolute;
-  z-index: 3;
-  top: 105px;
-  left: 12.139%; /* 105 / 865 */
-  height: 400px;
-  width: 575px; /* 575 / 865 */
-  background-color: #ffffff;
-}
-
-.modal_layer {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: -99999px;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(178, 178, 178, .6);
-}
-
-
-/************************
-
-List
-
-************************/
-
-
-main section ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 16px 0 0 0;
-  margin-top: 16px;
-  border-top: 1px solid rgba(206, 206, 206, .7);
-  font-size: 16px;
-  vertical-align: middle;
-}
-
-/* Target todo information */
-ul.data {
-  display: none;
-  border-color: rgba(0, 0, 0, .1);
-  border-width: 1px;
-  border-style: solid;
-  margin-top: 10px;
-  padding: 4px;
-}
-
-ul.data li {
-  border-top: none;
-  margin-top: 0;
-}
-
-ul.data > li:first-of-type {
-  padding-top: 0;
-}
-
-ul.data li.data_date p {
-  display: inline-block;
-}
-
-ul.data h4 {
-  color: #477284;
-}
-
-main li > a.item {
-  display: inline-block;
-}
-
-li label {
-  color: #000000;
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 10px;
-  background: transparent url("assets/images/icon_checkbox_unchecked.png") no-repeat;
-  background-size: 16px 18px;
-}
-
-main label:hover {
-  color: #148fd5;
-  cursor: pointer;
-}
-
-main input[type="checkbox"] {
-  visibility: hidden;
-}
-
-.finished {
-  color: #c7c7c7;
-  text-decoration: line-through;
-  background: transparent url("assets/images/icon_checkbox_checked.png") no-repeat;
-  background-size: 16px 18px;
-}
-
-main form a.delete {
-  cursor: pointer;
-}
-
-/* Hidden List Item to Clone */
-li#hidden_item {
-  display: none;
-}
-
-/***********************
-
-Aside
-
-***********************/
-
-aside {
-  min-width: 200px;
-  width: 27.917%; /* 335 / 1200 */
-  background-color: #464f77;
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
-  position: relative;
-}
-
-h2 {
-  color: #c7c7c7;
-  box-sizing: border-box;
-  vertical-align: middle;
-  padding-top: 70px;
-  padding-bottom: 10px;
-  padding-left: 29.851%; /* 100 / 335 */
-  padding-right: 10.448%; /* 35 / 335 */
-  width: 100%; /* 200 / 335 */
-}
-
-h2 img {
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 10px;
-}
-
-aside ul li {
-  color: #c7c7c7;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 0;
-  padding-left: 40.299%; /* 135 / 335 */
-  padding-right: 10.448%; /* 35 / 335 */
-  width: 100%;
-}
-
-ul li.active {
-  background-color: #2A3564;
-  color: #ffffff;
-}
-
-h2.all_todos,
-aside ul.all_todos li {
-}
-
-h2.all_todos::after,
-.all_todos li::after {
-  content: "3";
-  text-align: center;
-  border-radius: 100%;
-  height: 18px;
-  width: 18px;
-  line-height: normal;
-  background: #7287D8;
-  display: inline-block;
-  float: right;
-  margin-top: 5px;
-}
-
-
-/********************
-
+/***************************************************************************
 Media Queries
-
-********************/
-@media screen and (max-width: 800px) {
+***************************************************************************/
+@media only screen and (max-width: 1350px) {
   body {
-    margin-right: 0;
-    width: 95%;
-  }
-
-  main {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  main section {
-    padding-right: 5%;
-  }
-
-  .modal {
-    left: 0;
-    right: 0;
     width: 100%;
   }
 
@@ -465,34 +455,15 @@ Media Queries
     display: none;
   }
 
-  .animate_aside {
-    position: absolute;
-    display: block;
-    z-index: 2;
+  main {
+    width: 100%;
   }
 
-  .animate_hamburger {
-    position: absolute;
-    display: block;
-    margin-left: 210px; /* 200 + 10 */
-    z-index: 2;
+  main a#hamburger {
+    visibility: inherit;
   }
 
-  h2 {
-    padding-left: 7.462686567%; /* 100 - 75 / 335 */
-  }
-
-  aside ul li {
-    padding-left: 17.910447761%; /* 135 - 75 / 335 */
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .modal form {
-    padding: 15px;
-  }
-
-  .modal {
-    background-color: transparent;
+  h1.hamburger-padding {
+    padding-top: 44px; /* Current padding + height of hamburger*/
   }
 }
