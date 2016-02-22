@@ -163,7 +163,7 @@ aside span {
   height: 18px;
   width: 18px;
   text-align: center;
-  margin-top: 11px; /* (a height(40px) - circle height(18px)) / 2 */
+  margin-top: 10px; /* (a height(40px) - circle height(18px)) / 2 */
 }
 
 aside h2 span {
@@ -289,6 +289,10 @@ div#cross::after {
 /***************************************************************************
 Modal
 ***************************************************************************/
+#modal_background,
+#modal {
+  display: none;
+}
 
 div#modal_background {
   position: absolute;
