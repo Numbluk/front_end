@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************************************************************
+Body
+***************************************************************************/
+body {
+  background-color: #222526;
+  color: #222526;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1, h2,
+legend,
+label {
+  font-weight: 500;
+}
+
+
+main {
+  background-color: white;
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+/***************************************************************************
+Photo Container
+***************************************************************************/
+div#photo_container {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+div#photo_container img {
+  max-width: 100%;
+}
+
+div#photo_container figure {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+div#photo_container figure + figure {
+  display: none;
+}
+
+#photo_container figcaption {
+  background-color: #222526;
+  color: white;
+  padding: 20px;
+}
+
+/***************************************************************************
+Photo Info
+***************************************************************************/
+#photo_info {
+  margin: 25px 0;
+}
+
+#photo_info h2 {
+  float: left;
+  font-size: 1.5em;
+}
+
+#photo_info button {
+  float: right;
+}
+
+#clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/***************************************************************************
+Comments
+***************************************************************************/
+article {
+  vertical-align: top;
+  padding: 15px 0;
+}
+
+article + article {
+  border-top: 1px solid #cecece;
+}
+
+article::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+article .user_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article div.user_image {
+  width: 5%;
+  height: 100%;
+  float: left;
+}
+
+article .user_image::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+article div.comment_container {
+  width: 90%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.comment_container small {
+  display: block;
+  padding-top: 5px;
+}
+
+.comment_container p {
+  padding-top: 20px;
+}
+
+.comment_container h2{
+  font-size: 1.3em;
+}
+
+/***************************************************************************
+Form Input
+***************************************************************************/
+form {
+  margin-top: 20px;
+}
+
+form legend {
+  font-size: 1.3em;
+}
+
+form input,
+form label,
+form textarea {
+  display: block;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form button {
+  margin-top: 15px;
+}

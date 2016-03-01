@@ -1,0 +1,20 @@
+body {
+  width: 100%;
+  background-color: #cecece;
+}
+
+#container {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #58B2C3;
+  padding: 10px;
+  height: 200px;
+}
+
+input {
+  width: 30%;
+}
+
+input[type="button"] {
+  width: 10%;
+}

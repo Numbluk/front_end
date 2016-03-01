@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <main>
+      <section class="">
+        <h1>Photo Collection</h1>
+        <div id="photo_container">
+          <figure data-id="1">
+            <a href="#">
+              <img src="http://placehold.it/1280x1024">
+            </a>
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+          </figure>
+          <figure data-id="2">
+            <a href="#">
+              <img src="http://placehold.it/1280x1024/AD6575/ffffff">
+            </a>
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+          </figure>
+          <figure data-id="3">
+            <a href="#">
+              <img src="http://placehold.it/1280x1024/2F6741/ffffff">
+            </a>
+            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+          </figure>
+        </div>
+
+        <div id="photo_info">
+          <div id="clearfix">
+            <h2>Title</h2>
+            <button type="button">Likes</button>
+            <button type="button">Favorites</button>
+          </div>
+          <span id="date">Date Taken</span>
+        </div>
+      </section>
+
+      <section id="comments">
+        <h1>Comments</h1>
+        <article>
+          <div class="user_image">
+            <img src="http://placehold.it/1280x1024">
+          </div>
+
+          <div class="comment_container">
+            <h2>Lukas Nimmo</h2>
+            <span>Date Posted</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </article>
+      </section>
+
+      <form action="#" method="post">
+        <legend>Your Comment</legend>
+
+        <input type="hidden" name="photo_id" value="1"
+
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email">
+
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment"></textarea>
+
+        <button type="submit">Post Comment</button>
+      </form>
+    </main>
+
+    <script id="photos" type="text/x-handlebars">
+      {{#each photos}}
+        <figure data-id="{{id}}">
+          <a href="#">
+            <img src="{{src}}">
+          </a>
+          <figcaption>{{figcaption}}</figcaption>
+        </figure>
+      {{/each}}
+    </script>
+
+    <script id="photo_information" type="text/x-handlebars">
+      <div id="clearfix">
+        <h2>{{title}}</h2>
+        <button type="button">{{likes}}</button>
+        <button type="button">{{favorites}}</button>
+      </div>
+      <time>Date Taken: {{date_taken}}</time>
+    </script>
+
+    <script id="comments" type="text/x-handlebars">
+      {{#each comments}}
+        {{> comment}}
+      {{/each}}
+    </script>
+
+    <script id="comment" type="text/x-handlebars">
+      <article>
+        <div class="user_image">
+          <img src="{{gravatar}}">
+        </div>
+
+        <div class="comment_container">
+          <header>
+            <h2>{{name}}</h2>
+            <small>Date Posted: {{date}}</small>
+          </header>
+          <p>{{body}}</p>
+        </div>
+      </article>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+    <script src="javascripts/gallery.js"></script>
+  </body>
+</html>

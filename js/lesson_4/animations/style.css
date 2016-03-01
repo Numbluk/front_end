@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************************************************************
+Body
+***************************************************************************/
+body {
+  background: #C35B44;
+  width: 100%;
+}
+
+main {
+  width: 800px;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+div#canvas {
+  width: 800px;
+  height: 500px;
+  background: linear-gradient(to bottom, #ffffff, #4E70C3);
+  margin: 0 auto;
+  border: solid 1px #cecece;
+  position: relative;
+}
+
+div#links {
+  margin: 10px 0 20px 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+legend {
+  font-size: 1.3em;
+  padding: 20px 0;
+}
+
+input[type="number"] {
+  width: 60px;
+  height: 20px;
+  padding: 3px;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+}
+
+.shape_star,
+.shape_circle,
+.shape_square {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+
+.shape_star {
+  background: transparent url("star.png");
+  background-size: 30px;
+}
+
+.shape_circle {
+  border-radius: 100%;
+  background: #774135;
+}
+
+.shape_square {
+  background: #7B846E;
+}

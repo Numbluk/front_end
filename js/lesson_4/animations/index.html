@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <div id="canvas"></div>
+      <div id="links">
+        <a href="#" id="start">Start</a>
+        <span>|</span>
+        <a href="#" id="stop">Stop</a>
+      </div>
+
+      <form action="#" method="get">
+        <h1>Add a Shape</h1>
+        <fieldset>
+          <legend>Type</legend>
+          <div>
+            <input type="radio" id="square" value="shape_square" name="shape">
+            <label for="square">Square</label>
+          </div>
+          <div>
+            <input type="radio" id="circle" value="shape_circle" name="shape">
+            <label for="circle">Circle</label>
+          </div>
+          <div>
+            <input type="radio" id="star" value="shape_star" name="shape">
+            <label for="star">Star</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Starting Point</legend>
+            <input type="number" name="start_x" id="start_x" min="0" placeholder="x:">
+            <input type="number" name="start_y" id="start_y" min="0" placeholder="y:">
+        </fieldset>
+
+        <fieldset>
+          <legend>Ending Point</legend>
+          <input type="number" name="end_x" id="end_x" min="0" placeholder="x:">
+          <input type="number" name="end_y" id="end_y" min="0" placeholder="y:">
+        </fieldset>
+
+        <input type="submit" value="Add">
+      </form>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

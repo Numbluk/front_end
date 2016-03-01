@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <form action="#" method="post">
+        <h1>Inventory Order Form</h1>
+        <div>
+          <h2>Date Ordered</h2>
+          <span id="date"></span>
+        </div>
+
+        <label for="name">Requester Name</label>
+        <input type="text" name="name" id="name">
+
+        <fieldset id="shipping">
+          <legend>Shipping Address</legend>
+          <label for="street">Street Address</label>
+          <input type="text" name="street" id="street">
+
+          <label for="city">City</label>
+          <input type="text" name="city" id="city">
+          <label for="state">State</label>
+          <input type="text" name="state" id="state">
+          <label for="zip">Zipcode</label>
+          <input type="text" name="zip" id="zip">
+        </fieldset>
+
+        <fieldset id="ordering">
+          <legend>Items to Order</legend>
+          <script type="text/template" id="inventory_item">
+            <div id="item_container_ID">
+              <input type="hidden" name="item_id_ID" value="ID">
+
+              <label for="product_ID">Name</label>
+              <input type="text" name="product_name_ID" id="product_ID" value="">
+
+              <label for="stock_num_ID">Stock Number</label>
+              <input type="text" name="stock_num_ID" id="stock_num_ID">
+
+              <label for="quantity_ID">Quantity</label>
+              <input type="number" name="quantity_ID" id="quantity_ID" value="1">
+
+              <a href="#" class="delete">Delete</a>
+            </div>
+          </script>
+          <button type="button" id="add">Add Item</button>
+        </fieldset>
+
+        <button type="submit" id="submit">Order Inventory</button>
+      </form>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="inventory.js"></script>
+  </body>
+</html>
