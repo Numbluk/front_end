@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // Hamburger actions
   if ($("#hamburger").is(":visible")) {
     $("#hamburger").on("click", function(event) {
       event.preventDefault();

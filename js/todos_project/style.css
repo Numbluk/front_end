@@ -128,7 +128,7 @@ aside h2 {
 }
 
 aside .active,
-aside h2 {
+aside h2 a {
   color: #ffffff;
 }
 
@@ -235,6 +235,10 @@ main ul li {
   width: 100%;
 }
 
+main ul li#clone {
+	display: none;
+}
+
 main li a.trashcan {
   float: right;
 }
@@ -262,9 +266,12 @@ main li span:hover {
 }
 
 main li input[type="checkbox"]:checked ~ span {
-  text-decoration: line-through;
-  color: #b3b3b3;
   background: transparent url("assets/images/icon_checkbox_checked.png") no-repeat;
+}
+
+.complete {
+	text-decoration: line-through;
+  color: #b3b3b3;
 }
 
 div#cross {
