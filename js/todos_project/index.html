@@ -11,29 +11,43 @@
   <body>
     <aside>
       <div class="sidebar_background"></div>
-      <h2 class="incomplete_todos"><a href="#">All Todos<span>18</span></a></h2>
-      <ul>
-        <li><a class="active" href="#">No Due Date<span>8</span></a></li>
-        <li><a href="#">03/16<span>2</span></a></li>
-        <li><a href="#">04/16<span>1</span></a></li>
-        <li><a href="#">05/16<span>1</span></a></li>
-        <li><a href="#">06/16<span>6</span></a></li>
+      <h2 class="incomplete_todos"><a href="#">All Todos<span class="todos_left" id="all_todos_left">18</span></a></h2>
+      <ul id="unfinished">
+        <script type="text/x-handlebars" id="unfinished_aside">
+          {{#each date}}
+          <li>
+            <a href="#">
+              <span class="date">{{this}}</span>
+              <span class="todos_left">{{getUnfinished this}}</span>
+            </a>
+          </li>
+          {{/each}}
+        </script>
       </ul>
 
       <h2 class="completed_todos">Completed</h2>
-      <ul>
-        <li><a href="#">02/15</a></li>
-        <li><a href="#">03/15</a></li>
-        <li><a href="#">04/15</a></li>
-        <li><a href="#">05/15</a></li>
-        <li><a href="#">06/14</a></li>
+      <ul id="finished">
+        <script type="text/x-handlebars" id="finished_aside">
+          {{#each date}}
+            <li>
+              <a href="#">
+                <span class="date">{{this}}</span>
+              </a>
+            </li>
+          {{/each}}
+        </script>
+        <li><a href="#"><span class="date">02/15</span></a></li>
+        <li><a href="#"><span class="date">03/15</span></a></li>
+        <li><a href="#"><span class="date">04/15</span></a></li>
+        <li><a href="#"><span class="date">05/15</span></a></li>
+        <li><a href="#"><span class="date">06/14</span></a></li>
       </ul>
     </aside><!--
 
     --><main>
       <a href="#" id="hamburger"><img src="assets/images/icon_hamburger.png" alt="Hamburger Icon"></a>
 
-      <h1>02/16<span>8</span></h1>
+      <h1><span id="header_date">No Due Date</span><span id="left_on_page">0</span></h1>
 
       <a href="#" id="new_todo"><div id="cross"></div>Add new to do</a>
 
@@ -83,7 +97,7 @@
 
     <script type="text/x-handlebars" id="todo_list">
       {{#each todos}}
-        <li data-month="uncategorized" id="{{this.id}}">
+        <li data-month="{{this.due_date}}" id="{{this.id}}">
           {{#if this.finished}}
             <label>
               <input type="checkbox" checked>
@@ -98,7 +112,7 @@
             </label>
             <span class="name">{{this.title}}</span>
           {{/if}}
-          {{this.finished}}
+
           <a href="#" class="trashcan"><img src="assets/images/icon_trashcan.png"></a>
         </li>
       {{/each}}
