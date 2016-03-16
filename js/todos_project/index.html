@@ -44,7 +44,47 @@
       </ul>
     </aside><!--
 
+
+
     --><main>
+
+    <div id="modal">
+      <form action="#" method="post">
+        <div class="container_title">
+          <label for="title">Title</label><!--
+          --><input type="text" name="title" id="title" placeholder="Title">
+        </div>
+
+        <div class="container_dates">
+          <h3>Due Date</h3><!--
+          --><fieldset>
+            <label for="day"><!--
+            --><input type="number" min="0" max = "31" id="day" name="day" placeholder="Day"><!--
+              --><span>/</span><!--
+            --></label><!--
+            --><label for="month"><!--
+            --><input type="number" min="0" max="12" id="month" name="month" placeholder="Month"><!--
+              --><span>/</span><!--
+            --></label><!--
+            --><label for="year"><!--
+            --><input type="number" min="2016" id="year" name="year" placeholder="Year"><!--
+            --></label>
+          </fieldset>
+        </div>
+
+        <div class="container_description">
+          <label for="description">Description</label><!--
+          --><textarea id="description" placeholder="Description"></textarea>
+        </div>
+
+        <div class="container_buttons">
+          <input type="button" id="save" name="save" value="Save">
+          <input type="button" id="mark_complete" name="mark_complete" value="Mark As Complete">
+        </div>
+      </form>
+    </div>
+    <div id="modal_background"></div>
+    
       <a href="#" id="hamburger"><img src="assets/images/icon_hamburger.png" alt="Hamburger Icon"></a>
 
       <h1><span id="header_date">No Due Date</span><span id="left_on_page">0</span></h1>
@@ -52,43 +92,6 @@
       <a href="#" id="new_todo"><div id="cross"></div>Add new to do</a>
 
       <ul class="todos"></ul>
-
-      <div id="modal">
-        <form action="#" method="post">
-          <div class="container_title">
-            <label for="title">Title</label><!--
-            --><input type="text" name="title" id="title" placeholder="Title">
-          </div>
-
-          <div class="container_dates">
-            <h3>Due Date</h3><!--
-            --><fieldset>
-              <label for="day"><!--
-              --><input type="number" min="0" max = "31" id="day" name="day" placeholder="Day"><!--
-                --><span>/</span><!--
-              --></label><!--
-              --><label for="month"><!--
-              --><input type="number" min="0" max="12" id="month" name="month" placeholder="Month"><!--
-                --><span>/</span><!--
-              --></label><!--
-              --><label for="year"><!--
-              --><input type="number" min="2016" id="year" name="year" placeholder="Year"><!--
-              --></label>
-            </fieldset>
-          </div>
-
-          <div class="container_description">
-            <label for="description">Description</label><!--
-            --><textarea id="description" placeholder="Description"></textarea>
-          </div>
-
-          <div class="container_buttons">
-            <input type="button" id="save" name="save" value="Save">
-            <input type="button" id="mark_complete" name="mark_complete" value="Mark As Complete">
-          </div>
-        </form>
-      </div>
-      <div id="modal_background"></div>
     </main>
 
     <script type="text/x-handlebars" id="list_header">

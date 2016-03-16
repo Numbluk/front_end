@@ -166,6 +166,7 @@ $(document).ready(function() {
     var $list_to_delete = $(this).closest("li");
     $list_to_delete.remove();
     removeTodo($list_to_delete.attr("id"));
+    display(getCurrentMonthHeader());
   });
 
   // Toggle complete with checkbox
@@ -189,51 +190,59 @@ $(document).ready(function() {
     return text;
   }
 
+  var current_id = 0;
+  var $current_span;
+
   // Bring up modal on list name click
   $("ul.todos").on("click", "span.name", function(event) {
-    toggleModal();
-    var id = $(this).parent().attr("id");
-    var $current_span = $(this);
+    current_id = $(this).parent().attr("id");
+    $current_span = $(this);
+    console.log($current_span);
     var $current_month = $current_span.closest("li")[0].dataset.month;
-    event.stopPropagation();
-    $("form").trigger("click", id)
-
-    // Save information in modal to todo
-    $("form").on("click", "#save", function(event) {
-      event.stopImmediatePropagation();
-      var data = $("form").serializeArray();
-      var todo = removeTodo(id)[0];
-      console.log(todo);
-      todo.title = data[0].value
-
-      var month = data[2].value;
-      var year = data[3].value;
-      if(month && year) {
-        if (month.length == 1) { month = "0" + month; } // Date formatting
-        if (year.length == 4) { year = year.substr(2, 2); }
-        todo.due_date = month + "/" + year;
-      }
-
-      $current_span.closest("ul").after("<h4 id='update'>Update complete! Now due on: " + month + "/" + year + "</h4>");
-
-      assignTodo(todo);
-      $("#modal").hide();
-      $("#modal_background").hide();
-      $("form").trigger("reset");
-      display(getCurrentMonthHeader());
-    });
-
-    // Mark todo complete
-    $("#modal").on("click", "#mark_complete", function(e) {
-      getTodo(id).finished = true;
-      $current_span.closest("li").find("input").trigger("click");
-      // Why does toggleModal() not bind the event here after the first todo
-      // is marked as complete?
-      $("#modal").hide();
-      $("#modal_background").hide();
-      updateStorage();
-    });
+    toggleModal();
   });
+
+  // Save information in modal to todo
+  $("form").on("click", "#save", function(event) {
+    console.log(current_id);
+    console.log($current_span);
+    var data = $("form").serializeArray();
+    var todo = removeTodo(current_id)[0];
+    console.log(todo);
+    todo.title = data[0].value
+
+    var month = data[2].value;
+    var year = data[3].value;
+    if(month && year) {
+      if (month.length == 1) { month = "0" + month; } // Date formatting
+      if (year.length == 4) { year = year.substr(2, 2); }
+      todo.due_date = month + "/" + year;
+    }
+
+    $current_span.closest("ul").after("<h4 id='update'>Update complete! Now due on: " + month + "/" + year + "</h4>");
+
+    assignTodo(todo);
+    $("#modal").hide();
+    $("#modal_background").hide();
+    $("form").trigger("reset");
+    display(getCurrentMonthHeader());
+  });
+
+  // Mark todo complete
+  $("#modal").on("click", "#mark_complete", function(e) {
+    console.log(current_id);
+    console.log(getTodo(current_id));
+    console.log($current_span);
+    getTodo(current_id).finished = true;
+    $current_span.closest("li").find("input").trigger("click");
+    // Why does toggleModal() not bind the event here after the first todo
+    // is marked as complete?
+    $("#modal").hide();
+    $("#modal_background").hide();
+    updateStorage();
+    display(getCurrentMonthHeader());
+  });
+
 
   // Close modal by clicking off
   $("#modal_background").on("click", function() {
