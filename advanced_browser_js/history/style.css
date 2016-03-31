@@ -1,0 +1,40 @@
+body {
+  background-color: #aeaeae;
+}
+
+main,
+header {
+  width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding-bottom: 15px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  float: left;
+  list-style: none;
+}
+
+li + li {
+  padding-left: 20px;
+}
+
+ul::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+article + article {
+  display: none;
+}

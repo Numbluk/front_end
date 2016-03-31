@@ -1,0 +1,21 @@
+{
+  "name": "music_viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec --autotest --color --watch .",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "jasmine-node": "^1.14.5",
+    "node-static": "^0.7.7",
+    "nodemon": "^1.9.1",
+    "request": "^2.69.0"
+  }
+}

@@ -5,10 +5,18 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   </head>
   <body>
     <div id="map"></div>
     <div id="weather"></div>
+
+
+    <script id="weather_report" type="text/x-handlebars">
+      <p>{{location}}</p>
+      <p>{{temp}}</p>
+      <p>{{description}}</p>
+    </script>
     <script src="locations.js"></script>
   </body>
 </html>
