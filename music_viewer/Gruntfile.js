@@ -5,14 +5,14 @@ module.exports = function(grunt) {
         files: {
           "public/javascripts/vendor/all.js": ["public/javascripts/vendor/all.js"]
         }
-      },
-      bower_concat: {
-        all: {
-          dest: "./public/javascripts/vendor/all.js",
-          dependencies: {
-            "underscore": "jquery",
-            "backbone": "underscore"
-          }
+      }
+    },
+    bower_concat: {
+      all: {
+        dest: "public/javascripts/vendor/all.js",
+        dependencies: {
+          "underscore": "jquery",
+          "backbone": "underscore"
         }
       }
     }

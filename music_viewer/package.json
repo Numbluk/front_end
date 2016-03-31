@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node spec --autotest --color --watch .",
-    "start": "nodemon app.js"
+    "start": "nodemon ./public/javascripts/app.js"
   },
   "author": "",
   "license": "ISC",
