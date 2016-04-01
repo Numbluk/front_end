@@ -1,4 +1,4 @@
-var Albums = new Backbone.Collection.extend({
+var Albums = Backbone.Collection.extend({
   model: Album,
   url: "/albums.json"
 });

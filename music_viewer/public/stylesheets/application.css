@@ -1,0 +1,53 @@
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#tracks_modal {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  padding: 25px;
+  z-index: 10;
+  background: #f5f6d4;
+}
+
+#tracks_modal igm {
+  float: left;
+  width: 80px;
+  margin: 0 10px 10px 0;
+}
+
+#tracks_modal h1 {
+  padding-bottom: 10px;
+}
+
+#tracks_modal h2 {
+  padding-bottom: 5px;
+}
+
+#tracks_modal ol {
+  clear: both;
+  list-style: decimal inside;
+}
+
+#tracks_modal li {
+  padding: 7px 0;
+}
+
+#tracks_modal small {
+  float: right;
+}
+
+#tracks_modal {
+  overflow: scroll;
+}

@@ -4,11 +4,53 @@
     <meta charset="utf-8">
     <title></title>
     <script src="javascripts/vendor/all.js"></script>
+    <link rel="stylesheet" href="stylesheets/application.css">
   </head>
   <body>
 
+    <ul id="albums"></ul>
+
+    <div id="overlay"></div>
+
+    <script data-name="albums" type="text/x-handlebars">
+      {{#each albums}}
+      <li>
+        <a href="{{tracks_url}}">
+          <h1>{{artist}}</h1>
+          <h2>{{title}}</h2>
+          <img src="{{cover}}">
+          <p>Released on: {{date}}</p>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+
+    <script data-name="tracks" type="text/x-handlebars">
+      {{#with album}}
+      <a class="close" href="#">Close</a>
+      <img src="{{cover}}">
+      <h1>{{title}}</h1>
+      <h2>{{artist}}</h2>
+      <p>Released on: {{date}}</p>
+      {{/with}}
+      <ol>
+        {{#each tracks}}
+        <li>{{title}}<small>{{length}}</small></li>
+        {{/each}}
+      </ol>
+    </script>
+
     <script src="javascripts/models/album.js"></script>
+    <script src="javascripts/models/track.js"></script>
     <script src="javascripts/collections/albums.js"></script>
+    <script src="javascripts/collections/tracks.js"></script>
+    <script src="javascripts/views/albums.js"></script>
+    <script src="javascripts/views/tracks.js"></script>
     <script src="javascripts/app.js"></script>
+
+    <script>
+      App.init();
+    </script>
+
   </body>
 </html>

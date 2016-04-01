@@ -1,37 +1,71 @@
-var static = require('node-static');
-var http = require('http');
-
-var fileServer = new static.Server('./public');
-
-
-http.createServer(function (request, response) {
-    request.addListener('end', function () {
-        fileServer.serve(request, response, function (err, result) {
-          console.log(request.url);
-            if (err) { // There was an error serving the file
-                console.error("Error serving " + request.url + " - " + err.message);
-
-                // Respond to the client
-                response.writeHead(err.status, err.headers);
-                response.end();
-            }
-        });
-    }).resume();
-}).listen(3000);
-
 var App = {
   init: function() {
     this.fetchAlbums();
   },
   fetchAlbums: function() {
     this.albums = new Albums();
+    this.view = new AlbumsView({ collection: this.albums });
     this.albums.fetch({
-      success: function() {
-        this.albumsLoaded.bind(this);
-      }
+      success: this.albumsLoaded.bind(this)
     });
   },
-  albumsLoaded: function() {
 
+  fetchTracks: function(name) {
+    var tracks = new (Tracks.extend({
+      url: "/albums/" + name + ".json"
+    }))();
+    console.log(tracks);
+
+    this.selected_album = this.albums.findWhere({ title: name });
+
+    tracks.fetch({
+      success: this.tracksLoaded.bind(this)
+    });
+  },
+
+  tracksLoaded: function(tracks) {
+    var tracks_modal = new TracksView({
+      collection: tracks,
+      album: this.selected_album.toJSON()
+    });
+    tracks_modal.render();
+    this.tracks = tracks_modal;
+  },
+
+  albumsLoaded: function() {
+    this.view.render();
   }
 };
+
+var Router = Backbone.Router.extend({
+  routes: {
+    "albums/:name": "getAlbum"
+  },
+
+  initialize: function() {
+    this.route(/^\/?$/, "index", this.index);
+  },
+
+  index: function() {
+    if ( !App.tracks.$el.is(":animated") ) {
+      App.tracks.fadeOut();
+    }
+  },
+
+  getAlbum: function(name) {
+    console.log(name);
+    App.fetchTracks(name);
+  }
+});
+
+var router = new Router();
+
+Backbone.history.start({
+  pushState: true,
+  silent: true
+});
+
+$(document).on("click", "a[href^='/']", function(e) {
+  e.preventDefault();
+  router.navigate($(e.currentTarget).attr("href").replace(/^\//, ""), { trigger: true});
+});
